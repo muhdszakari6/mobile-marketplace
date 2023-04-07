@@ -6,7 +6,7 @@ import { AiFillStar } from "react-icons/ai";
 import ProductFooter from "../components/product/product-footer";
 import { Tab } from "@headlessui/react";
 
-const categories = ["About Item", "Reviews"];
+const categories = [{name:"About Item", panel:null}, {name:"Reviews", panel:null}];
 
 const container = {
   hidden: { y: "100%" },
@@ -98,24 +98,29 @@ const ProductPage = () => {
             2.3k sold
           </span>
         </motion.div>
-        {/* <motion.div className="" variants={item}> */}
-        <Tab.Group>
-          <Tab.List className="flex bg-blue-900/20 p-1">
-            {categories.map((category) => (
-              <Tab
-                key={category}
-                className={({ selected }) =>
-                  selected
-                    ? "bg-white shadow"
-                    : "text-blue-100 hover:bg-white/[0.12] hover:text-white"
-                }
-              >
-                {category}
-              </Tab>
-            ))}
-          </Tab.List>
-        </Tab.Group>
-        {/* </motion.div> */}
+        <motion.div className="" variants={item}>
+          <Tab.Group>
+            <Tab.List className="flex  border-b border-gray-200 mt-3 mb-3">
+              {categories.map((category) => (
+                <Tab
+                  key={category.name}
+                  className={({ selected }) =>
+                    selected
+                      ? "text-primary-500 border-b border-primary-500 pb-1 text-xs font-semibold flex-1 outline-none"
+                      : "text-gray-400 text-xs pb-1 outline-none flex-1"
+                  }
+                >
+                  {category.name}
+                </Tab>
+              ))}
+            </Tab.List>
+            <Tab.Panels>
+                {categories.map((category) =>(
+              <Tab.Panel key={category.name}>{category.panel}</Tab.Panel>
+                ))}
+            </Tab.Panels>
+          </Tab.Group>
+        </motion.div>
       </div>
 
       <motion.div
