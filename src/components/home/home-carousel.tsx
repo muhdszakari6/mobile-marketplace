@@ -15,7 +15,6 @@ const HomeCarousel = () => {
       onActiveIndexChange={(swiperCore) => {
         setSwiperIndex(swiperCore.activeIndex);
       }}
-      className="-mt-16"
     >
       {carousel_data.map((carousel) => (
         <SwiperSlide key={carousel.hashtag}>
