@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { AiOutlineHeart, AiFillHeart, AiFillStar } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 interface ProductProps {
   photo: string;
@@ -19,7 +20,10 @@ const ProductCard = ({
 }: ProductProps) => {
   const [liked, setLiked] = useState(false);
   return (
-    <div className="hover:shadow-lg p-2 relative">
+    <Link
+      to={`product/${photo.replaceAll(".", "_")}`}
+      className="hover:shadow-lg p-2 relative"
+    >
       {!liked && (
         <AiOutlineHeart
           onClick={() => setLiked(!liked)}
@@ -50,7 +54,7 @@ const ProductCard = ({
           ${price.toFixed(2)}
         </h3>
       </div>
-    </div>
+    </Link>
   );
 };
 
