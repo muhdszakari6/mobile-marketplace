@@ -18,7 +18,7 @@ const Hero = ({
 
   return (
     <div
-      style={{ backgroundImage: `url('/src/assets/home/${photo}')` }}
+      style={{ backgroundImage: `url('/assets/home/${photo}')` }}
       className={`relative min-h-[15rem] bg-cover brightness-95 z-0 pt-[5rem] px-4 flex justify-between`}
     >
       <div className="flex flex-col items-start">
