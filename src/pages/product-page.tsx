@@ -5,15 +5,19 @@ import { BsCamera } from "react-icons/bs";
 import { AiFillStar } from "react-icons/ai";
 import ProductFooter from "../components/product/product-footer";
 import { Tab } from "@headlessui/react";
+import ProductAbout from "../components/product/product-about";
+import Reccomendation from "../components/product/recommended-products";
 
-const categories = [{name:"About Item", panel:null}, {name:"Reviews", panel:null}];
+const categories = [
+  { name: "About Item", panel: <ProductAbout /> },
+  { name: "Reviews", panel: null },
+];
 
 const container = {
   hidden: { y: "100%" },
   show: {
     y: 0,
     transition: {
-      //   delayChildren: 0.25,
       duration: 0.25,
       staggerChildren: 0.05,
     },
@@ -98,7 +102,7 @@ const ProductPage = () => {
             2.3k sold
           </span>
         </motion.div>
-        <motion.div className="" variants={item}>
+        <motion.div variants={item}>
           <Tab.Group>
             <Tab.List className="flex  border-b border-gray-200 mt-3 mb-3">
               {categories.map((category) => (
@@ -115,14 +119,16 @@ const ProductPage = () => {
               ))}
             </Tab.List>
             <Tab.Panels>
-                {categories.map((category) =>(
-              <Tab.Panel key={category.name}>{category.panel}</Tab.Panel>
-                ))}
+              {categories.map((category) => (
+                <Tab.Panel key={category.name}>{category.panel}</Tab.Panel>
+              ))}
             </Tab.Panels>
           </Tab.Group>
         </motion.div>
+        <motion.div variants={item}>
+          <Reccomendation />
+        </motion.div>
       </div>
-
       <motion.div
         className="fixed z-10 bottom-0 left-0 right-0"
         variants={item}

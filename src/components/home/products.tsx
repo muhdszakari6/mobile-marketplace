@@ -4,7 +4,7 @@ const Products = () => {
   return (
     <div className="py-4 px-4 bg-gray-50">
       <div className="flex justify-between z-10 bg-gray-50 pt-3 pb-2 items-end mb-1 sticky top-[calc(4rem-1px)]">
-        <h2 className="text-lg font-bold text-black capitalize">
+        <h2 className="text-base font-bold text-black capitalize">
           Best Sale Product
         </h2>
         <a href="#" className="text-sm text-primary-500 leading-7">
