@@ -63,7 +63,7 @@ const ProductPage = () => {
             {[1, 2, 3, 4].map((_, i) => (
               <motion.div className="block mb-3" key={i} variants={item}>
                 <img
-                  loading="lazy"
+                  loading="eager"
                   src={`/assets/product-page/product-sm.jpeg`}
                   alt={id}
                   className="h-8 rounded-md"
@@ -72,7 +72,7 @@ const ProductPage = () => {
             ))}
           </div>
           <img
-            loading="lazy"
+            loading="eager"
             src={`/assets/product-page/product.webp`}
             alt={id}
             className="rounded-md"
