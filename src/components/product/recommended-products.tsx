@@ -3,11 +3,11 @@ import ProductCard from "../ui/product-card";
 const Reccomendation = () => {
   return (
     <>
-      <div className="flex justify-between z-10  pt-3 pb-2 items-end mb-1 sticky top-[calc(4rem-1px)]">
+      <div className="flex justify-between z-10 pt-3 pb-2 items-end mb-1">
         <h2 className="text-base font-bold text-black capitalize">
           Reccomendation
         </h2>
-        <a href="#" className="text-sm text-primary-500 leading-7">
+        <a href="#" className="text-xs text-primary-500 leading-7">
           See more
         </a>
       </div>

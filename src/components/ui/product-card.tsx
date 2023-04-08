@@ -42,7 +42,12 @@ const ProductCard = ({
           className="text-xl absolute top-2.5 right-2.5 text-red-500"
         />
       )}
-      <img loading="eager" src={`/assets/home/${photo}`} alt={title} />
+      <img
+        className="min-h-[8rem]"
+        loading="eager"
+        src={`/assets/home/${photo}`}
+        alt={title}
+      />
       <p className="text-gray-400 text-xs mt-3">{category}</p>
       <h3 className="mt-1 text-black text-sm font-semibold">{title}</h3>
       <div className="flex items-end">

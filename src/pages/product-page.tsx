@@ -64,7 +64,7 @@ const ProductPage = () => {
         <ProductHeader />
       </motion.div>
       <div className="my-16 px-4">
-        <motion.div className="z-0  relative" variants={item}>
+        <motion.div className="z-0 min-h-[18rem] relative" variants={item}>
           <div className="absolute top-4 left-4">
             {[1, 2, 3, 4].map((_, i) => (
               <div className="block mb-3" key={i}>

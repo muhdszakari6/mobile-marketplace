@@ -1,5 +1,6 @@
 import ProductDescription from "./product-description";
 import ProductShipping from "./product-shipping";
+import SellerInfo from "./seller-info";
 
 const properties = [
   { label: "Brand", value: "Puma" },
@@ -26,6 +27,7 @@ const ProductAbout = () => {
       </div>
       <ProductDescription />
       <ProductShipping />
+      <SellerInfo />
     </>
   );
 };

@@ -7,7 +7,7 @@ const Products = () => {
         <h2 className="text-base font-bold text-black capitalize">
           Best Sale Product
         </h2>
-        <a href="#" className="text-sm text-primary-500 leading-7">
+        <a href="#" className="text-xs text-primary-500 leading-7">
           See more
         </a>
       </div>

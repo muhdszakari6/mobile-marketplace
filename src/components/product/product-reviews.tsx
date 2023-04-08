@@ -1,5 +1,7 @@
 import { BsStarFill, BsStarHalf, BsStar } from "react-icons/bs";
 import Select from "../ui/select";
+import Pagination from "../ui/pagination";
+import ReviewItem from "./review-item";
 
 const ProductReviews = () => {
   const rating = 2.5;
@@ -8,7 +10,7 @@ const ProductReviews = () => {
   const emptyStars = Array.from(Array(Math.floor(5 - rating)).keys());
 
   return (
-    <div className="pb-3 mb-3 border-b border-gray-200">
+    <div className="pb-8 mb-3">
       <h3 className="text-black-500 text-xs leading-7 capitalize font-semibold">
         Review & Ratings
       </h3>
@@ -88,7 +90,7 @@ const ProductReviews = () => {
           </div>
         ))}
       </div>
-      <div className="flex items-end justify-between pt-3 pb-1 border-t border-gray-200">
+      <div className="flex items-end justify-between pt-3 mb-4 pb-1 border-t border-gray-200">
         <div className="flex flex-col">
           <h3 className="text-black-500 text-xs leading-7 capitalize font-semibold">
             Top reviews
@@ -100,6 +102,15 @@ const ProductReviews = () => {
         <div className="w-[30%]">
           <Select options={options} />
         </div>
+      </div>
+      {reviews.map((review) => (
+        <ReviewItem key={review.name} review={review} />
+      ))}
+      <div className="flex items-center justify-between pt-8">
+        <Pagination />
+        <a href="#" className="text-xs text-primary-500">
+          See more
+        </a>
       </div>
     </div>
   );
@@ -123,3 +134,7 @@ const reviewsSummary = [
 const totalReviews = 100;
 
 const options = ["Popular", "Recent", "Oldest"];
+const reviews = [
+  { name: "Eren Yeager", rating: "5.0" },
+  { name: "Levi Ackermann", rating: "4.0" },
+];
