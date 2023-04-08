@@ -1,4 +1,5 @@
 import { BsStarFill, BsStarHalf, BsStar } from "react-icons/bs";
+import Select from "../ui/select";
 
 const ProductReviews = () => {
   const rating = 2.5;
@@ -87,6 +88,19 @@ const ProductReviews = () => {
           </div>
         ))}
       </div>
+      <div className="flex items-end justify-between pt-3 pb-1 border-t border-gray-200">
+        <div className="flex flex-col">
+          <h3 className="text-black-500 text-xs leading-7 capitalize font-semibold">
+            Top reviews
+          </h3>
+          <span className="text-gray-400 text-xs mt-auto">
+            Showing 3 out of 2.5k reviews
+          </span>
+        </div>
+        <div className="w-[30%]">
+          <Select options={options} />
+        </div>
+      </div>
     </div>
   );
 };
@@ -107,3 +121,5 @@ const reviewsSummary = [
 ];
 
 const totalReviews = 100;
+
+const options = ["Popular", "Recent", "Oldest"];
