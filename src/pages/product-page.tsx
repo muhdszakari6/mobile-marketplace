@@ -7,14 +7,20 @@ import ProductFooter from "../components/product/product-footer";
 import { Tab } from "@headlessui/react";
 import ProductAbout from "../components/product/product-about";
 import Reccomendation from "../components/product/recommended-products";
+import ProductReviews from "../components/product/product-reviews";
 
 const categories = [
   { name: "About Item", panel: <ProductAbout /> },
-  { name: "Reviews", panel: null },
+  { name: "Reviews", panel: <ProductReviews /> },
 ];
 
 const container = {
-  hidden: { y: "100%" },
+  hidden: {
+    y: "100%",
+    transitionEnd: {
+      transform: "none",
+    },
+  },
   show: {
     y: 0,
     transition: {
@@ -31,7 +37,7 @@ const container = {
 };
 
 const item = {
-  hidden: { opacity: 0, y: "100%" },
+  hidden: { opacity: 0, y: "10%" },
   show: {
     opacity: 1,
     y: 0,
@@ -41,7 +47,7 @@ const item = {
   },
   remove: {
     opacity: 0,
-    y: "50%",
+    y: "10%",
   },
 };
 
@@ -57,18 +63,18 @@ const ProductPage = () => {
       <motion.div className="fixed z-10 top-0 left-0 right-0" variants={item}>
         <ProductHeader />
       </motion.div>
-      <div className="pt-16 pb-14 px-4">
+      <div className="my-16 px-4">
         <motion.div className="z-0  relative" variants={item}>
           <div className="absolute top-4 left-4">
             {[1, 2, 3, 4].map((_, i) => (
-              <motion.div className="block mb-3" key={i} variants={item}>
+              <div className="block mb-3" key={i}>
                 <img
                   loading="eager"
                   src={`/assets/product-page/product-sm.jpeg`}
                   alt={id}
-                  className="h-8 rounded-md"
+                  className="h-12 rounded-md"
                 />
-              </motion.div>
+              </div>
             ))}
           </div>
           <img
@@ -104,7 +110,7 @@ const ProductPage = () => {
         </motion.div>
         <motion.div variants={item}>
           <Tab.Group>
-            <Tab.List className="flex  border-b border-gray-200 mt-3 mb-3">
+            <Tab.List className="flex  border-b border-gray-200 mt-3 mb-3 sticky top-[calc(4rem-1px)] bg-white">
               {categories.map((category) => (
                 <Tab
                   key={category.name}

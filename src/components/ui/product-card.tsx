@@ -21,18 +21,24 @@ const ProductCard = ({
   const [liked, setLiked] = useState(false);
   return (
     <Link
-      to={`product/${photo.replaceAll(".", "_")}`}
+      to={`/product/${photo.replaceAll(".", "_")}`}
       className="hover:shadow-lg p-2 relative"
     >
       {!liked && (
         <AiOutlineHeart
-          onClick={() => setLiked(!liked)}
+          onClick={(e) => {
+            setLiked(!liked);
+            e.preventDefault();
+          }}
           className="text-xl absolute top-2.5 right-2.5"
         />
       )}
       {liked && (
         <AiFillHeart
-          onClick={() => setLiked(!liked)}
+          onClick={(e) => {
+            setLiked(!liked);
+            e.preventDefault();
+          }}
           className="text-xl absolute top-2.5 right-2.5 text-red-500"
         />
       )}

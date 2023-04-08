@@ -4,9 +4,12 @@ import Home from "../pages/home";
 import ProductPage from "../pages/product-page";
 import { AnimatePresence } from "framer-motion";
 import NotFound from "../pages/not-found";
+import { useScrollToTop } from "../components/ui/scroll-to-top";
 
 const AppRoutes = () => {
   const location = useLocation();
+  useScrollToTop();
+
   return (
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>

@@ -3,7 +3,7 @@ import { BsBagDash } from "react-icons/bs";
 const ProductFooter = () => {
   return (
     <>
-      <div className="z-10 bg-white px-4 items-center h-14 flex justify-between">
+      <div className="z-10 bg-white px-4 items-center h-16 flex justify-between shadow-bottom-nav">
         <div className="mb-3">
           <span className="text-gray-400 text-xs ml-0.5 capitalize">
             Total Price
