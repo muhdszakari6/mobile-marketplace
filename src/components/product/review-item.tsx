@@ -31,7 +31,7 @@ const ReviewItem = ({ review }: ReviewProps) => {
         </div>
       </div>
       <div className="flex items-center flex-wrap">
-        <Chip>Legit Seller</Chip>
+        <Chip>Legit Vendor</Chip>
         <Chip>Very Good Product</Chip>
         <Chip>Excellent Service</Chip>
       </div>
