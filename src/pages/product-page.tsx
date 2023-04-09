@@ -110,7 +110,7 @@ const ProductPage = () => {
         </motion.div>
         <motion.div variants={item}>
           <Tab.Group>
-            <Tab.List className="flex  border-b border-gray-200 mt-3 mb-3 sticky top-[calc(4rem-1px)] bg-white">
+            <Tab.List className="flex  border-b border-gray-200 mt-3 mb-3 sticky top-[calc(4rem-1px)] bg-white z-10">
               {categories.map((category) => (
                 <Tab
                   key={category.name}
