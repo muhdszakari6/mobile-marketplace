@@ -47,6 +47,6 @@ const products = [
     rating: 4.6,
     reviews: 2345,
     price: 12,
-    photo: "product-two.jpeg",
+    photo: "product-two.webp",
   },
 ];

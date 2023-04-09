@@ -1,31 +1,31 @@
 import { BsStarFill, BsFillHandThumbsUpFill } from "react-icons/bs";
 import { FiMoreHorizontal } from "react-icons/fi";
 import Chip from "../ui/chip";
-interface Review{
-    name: string;
-    rating: string;
+interface Review {
+  name: string;
+  rating: string;
 }
-interface ReviewProps{
-    review: Review;
+interface ReviewProps {
+  review: Review;
 }
-const ReviewItem = ({review}:ReviewProps) => {
+const ReviewItem = ({ review }: ReviewProps) => {
   return (
     <div className="pb-3 pt-3 border-b border-gray-200">
       <div className="flex items-center justify-between">
         <div className="flex items-center">
           <img
             loading="eager"
-            src={`/assets/product-page/product-sm.jpeg`}
+            src={`/assets/product-page/user.webp`}
             className="rounded-full h-6 mr-2"
           />
           <h3 className="text-black-500 text-xs leading-7 capitalize font-semibold">
-           {review.name}
+            {review.name}
           </h3>
         </div>
         <div className="flex items-center">
           <BsStarFill className="text-xs text-[#FFA500] mr-1" />
           <h3 className="text-black-500 text-xs mr-3 leading-7 capitalize font-semibold">
-           {review.rating}
+            {review.rating}
           </h3>
           <FiMoreHorizontal className="text-xs text-gray-400 mr-1" />
         </div>

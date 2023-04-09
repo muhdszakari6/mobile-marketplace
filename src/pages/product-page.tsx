@@ -72,7 +72,7 @@ const ProductPage = () => {
                   loading="eager"
                   src={`/assets/product-page/product-sm.jpeg`}
                   alt={id}
-                  className="h-12 rounded-md"
+                  className="h-12 rounded-md border border-gray-200"
                 />
               </div>
             ))}

@@ -14,11 +14,11 @@ const ProductFooter = () => {
         </div>
 
         <div className="flex items-center justify-between">
-          <button className="rounded-l-md text-white text-[0.6rem] px-2 py-3 bg-primary-500 flex items-center">
+          <button className="rounded-l-md text-white text-xs px-2 py-3 bg-primary-500 flex items-center">
             <BsBagDash className="text-sm mr-1" />
             <span>1</span>
           </button>
-          <button className="rounded-r-md text-white text-[0.6rem] px-5 py-3 bg-primary-950">
+          <button className="rounded-r-md text-white text-xs px-5 py-3 bg-primary-950">
             Buy Now
           </button>
         </div>
