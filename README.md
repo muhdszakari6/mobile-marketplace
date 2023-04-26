@@ -1,16 +1,17 @@
-# 📱 Mobile Marketplace #
+# 📱 Mobile Marketplace
 
-### 👨🏽‍🍳 Build & Run ###
+### 👨🏽‍🍳 Build & Run
 
-##### 🏃🏽‍♂️💨 Run #####
+##### 🏃🏽‍♂️💨 Run
+
 ```shell
 npm install
 npm run start
 ```
 
-##### 📦 Build #####
+##### 📦 Build
+
 ```shell
 npm install
 npm run build
 ```
-
