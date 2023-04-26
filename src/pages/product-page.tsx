@@ -97,7 +97,7 @@ const ProductPage = () => {
         >
           <AiFillStar className="text-xs text-[#FFA500]" />
           <span className="text-gray-400 text-xs ml-0.5 leading-7 capitalize">
-            4.6 ratings
+            4.7 ratings
           </span>
           <span className="bg-gray-400 h-1 w-1 rounded-full text-xs mx-3 leading-7"></span>
           <span className="text-gray-400 text-xs ml-0.5 leading-7 capitalize">
