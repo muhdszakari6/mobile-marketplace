@@ -105,7 +105,7 @@ const ProductPage = () => {
           </span>
           <span className="bg-gray-400 h-1 w-1 rounded-full text-xs mx-3 leading-7"></span>
           <span className="text-gray-400 text-xs ml-0.5 leading-7 capitalize">
-            2.3k sold
+            3.9k sold
           </span>
         </motion.div>
         <motion.div variants={item}>
